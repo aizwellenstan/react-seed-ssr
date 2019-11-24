@@ -8,6 +8,8 @@
     "packages/*"
   ],
   "scripts": {
+    "es": "elasticsearch-6.4.2/bin/elasticsearch",
+    "start:server": "yarn run start",
     "test": "run-s test:*",
     "test:jest": "jest --coverage",
     "test:eslint": "eslint -c .eslintrc.json 'packages/**/*.{ts,tsx}'",
