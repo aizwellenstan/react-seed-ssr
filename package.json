@@ -1,0 +1,61 @@
+{
+  "name": "refined-itsukara-link",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Ryo Igarashi <n33t5hin@gmail.com>",
+  "license": "AGPL-3.0-or-later",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "run-s test:*",
+    "test:jest": "jest --coverage",
+    "test:eslint": "eslint -c .eslintrc.json 'packages/**/*.{ts,tsx}'",
+    "test:stylelint": "stylelint 'packages/**/*.{tsx,tsx}'",
+    "test:tsc": "tsc -p packages/client && tsc -p packages/server",
+    "build": "yarn workspace @ril/client run build && yarn workspace @ril/gateway run build",
+    "watch": "yarn workspace @ril/client run watch",
+    "start": "yarn workspace @ril/server run start",
+    "manage:translations": "i18next-scanner 'packages/**/*.{ts,tsx}'"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "codecov": "^3.5.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "husky": "^3.0.9",
+    "i18next-scanner": "^2.10.3",
+    "i18next-scanner-typescript": "^1.0.3",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
+    "stylelint": "^11.1.1",
+    "stylelint-config-property-sort-order-smacss": "^5.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint",
+      "git add"
+    ]
+  }
+}
