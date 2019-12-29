@@ -14,11 +14,6 @@
     "@graphql-codegen/cli": "^1.8.2",
     "@graphql-codegen/typescript": "^1.8.2",
     "@graphql-codegen/typescript-resolvers": "^1.8.2",
-    "@ril/arts": "^1.0.0",
-    "@ril/client": "^0.0.0",
-    "@ril/gateway": "^1.0.0",
-    "@ril/locales": "^0.0.0",
-    "@ril/schema": "^0.0.0",
     "@types/cors": "^2.8.6",
     "@types/cron": "^1.7.1",
     "@types/dotenv": "^8.2.0",
@@ -48,5 +43,8 @@
     "tsconfig-paths": "^3.8.0",
     "type-fest": "^0.8.1",
     "typeorm": "^0.2.20"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.4"
   }
 }

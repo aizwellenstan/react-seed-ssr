@@ -1,4 +1,4 @@
-import typeDefs from '@ril/schema';
+import typeDefs from '../../schema/schema.gql';
 import {
   InMemoryCache,
   IntrospectionFragmentMatcher,

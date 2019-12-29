@@ -18,9 +18,9 @@ import { CategoryCron } from './cron/category';
 import { createElasticsearchConnection } from './elasticsearch';
 import { routes } from './routes';
 
-const arts = require.resolve('@ril/arts');
-const schema = require.resolve('@ril/schema');
-const client = require.resolve('@ril/client');
+const arts = require.resolve('../../arts');
+const schema = require.resolve('../../schema');
+const client = require.resolve('../../client');
 
 (async () => {
   const artsStatic = path.resolve(arts, '../static');

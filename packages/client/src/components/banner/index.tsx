@@ -7,7 +7,7 @@ import {
 } from 'src/components/search-form';
 import { Navigation } from 'src/components/navigation';
 import { Link } from 'react-router-dom';
-import logo from '@ril/arts/static/logo-small.png';
+import logo from '../../../../arts/static/logo-small.png';
 import { BANNER } from 'src/styles/z-indices';
 import { ModalMenu } from './modal-menu';
 import { CompactSearchForm } from './compact-search-form';

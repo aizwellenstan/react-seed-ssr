@@ -1,9 +1,9 @@
 import path from 'path';
 import express from 'express';
-import render from '@ril/client';
-import manifest from '@ril/client/static/build/manifest.json';
+import render from '../../../client';
+import manifest from '../../../client/static/build/manifest.json';
 
-const client = require.resolve('@ril/client');
+const client = require.resolve('../../../client');
 const router = express.Router();
 
 // Service worker

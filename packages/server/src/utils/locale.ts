@@ -1,5 +1,5 @@
-import en from '@ril/locales/en/translation.json';
-import ja from '@ril/locales/ja/translation.json';
+import en from '../../../locales/en/translation.json';
+import ja from '../../../locales/ja/translation.json';
 import i18next from 'i18next';
 import { LanguageDetector } from 'i18next-express-middleware';
 

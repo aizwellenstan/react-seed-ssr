@@ -1,5 +1,5 @@
-import en from '@ril/locales/en/translation.json';
-import ja from '@ril/locales/ja/translation.json';
+import en from '../../../locales/en/translation.json';
+import ja from '../../../locales/ja/translation.json';
 import dayjs from 'dayjs';
 import i18next from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -19,10 +19,7 @@ export function normalizeLanguageForDayjs(lng: string) {
     'es-do',
     'es-us',
     'pt-br',
-    'sr-cyrl',
-    'zh-cn',
-    'zh-hk',
-    'zh-tw',
+    'sr-cyrl'
   ].includes(lng)
     ? lng
     : lng.split('-')[0];

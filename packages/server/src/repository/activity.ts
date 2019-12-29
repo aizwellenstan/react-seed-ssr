@@ -1,7 +1,7 @@
 import { EntityRepository, EntityManager } from 'typeorm';
 import { Activity } from 'src/entity/activity';
 import { matchTeamFromPerformerIds } from 'src/utils/teams';
-import { Event, LiverRelationship } from '@ril/gateway';
+import { Event, LiverRelationship } from '../../../gateway';
 import { PerformerRepository } from './performer';
 import { CategoryRepostiory } from './category';
 import { TeamRepository } from './team';

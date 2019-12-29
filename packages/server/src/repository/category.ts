@@ -1,6 +1,6 @@
 import { EntityRepository, EntityManager } from 'typeorm';
 import { Category } from 'src/entity/category';
-import { Genre } from '@ril/gateway';
+import { Genre } from '../../../gateway';
 
 interface GetAllAndCountParams {
   limit?: number;

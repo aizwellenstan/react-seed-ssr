@@ -1,8 +1,8 @@
-import agenda from '@ril/arts/static/agenda.png';
-import screenshot from '@ril/arts/static/screenshot.png';
-import timetable from '@ril/arts/static/timetable.png';
-import streamerOrCollab from '@ril/arts/static/streamer-or-collab.png';
-import search from '@ril/arts/static/search.png';
+import agenda from '../../../../arts/static/agenda.png';
+import screenshot from '../../../../arts/static/screenshot.png';
+import timetable from '../../../../arts/static/timetable.png';
+import streamerOrCollab from '../../../../arts/static/streamer-or-collab.png';
+import search from '../../../../arts/static/search.png';
 import React, { useState } from 'react';
 import { useLocalStorage } from 'react-use';
 import { useTranslation, Trans } from 'react-i18next';

@@ -1,6 +1,6 @@
 import { EntityRepository, EntityManager } from 'typeorm';
 import { Performer } from 'src/entity/performer';
-import { LiverRelationship } from '@ril/gateway';
+import { LiverRelationship } from '../../../gateway';
 import { TwitterAccount } from 'src/entity/twitter-account';
 import { YoutubeAccount } from 'src/entity/youtube-account';
 

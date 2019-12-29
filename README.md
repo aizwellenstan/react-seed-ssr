@@ -27,6 +27,5 @@ yarn run build
 3. Start Server & Client
 ```
 yarn run es
-yarn run start:server
-yarn run watch
+yarn run start
 ```

@@ -1,4 +1,4 @@
-import { Gateway, LiverRelationship } from '@ril/gateway';
+import { Gateway, LiverRelationship } from '../../../gateway';
 import { CronJob } from 'cron';
 import { RESOURCE_URL } from 'src/config';
 import { Connection } from 'typeorm';
