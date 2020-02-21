@@ -39,7 +39,15 @@ router.use(async (req, res) => {
   });
 
   res.status(result.statusCode);
-  res.send(`<!DOCTYPE html>\n${result.staticMarkup}`);
+  res.send(`<!DOCTYPE html>\n
+  <link rel="stylesheet" href="https://product.nadi3docms.com/nadidemo4/assets/css/bootstrap.min.css">\n
+  <link rel="stylesheet" href="https://product.nadi3docms.com/nadidemo4/assets/css/login.css">\n
+  <script type="text/javascript" src="https://product.nadi3docms.com/nadidemo4/assets/js/jquery-3.2.1.min.js"></script>\n
+  <script type="text/javascript" src="https://product.nadi3docms.com/nadidemo4/assets/js/bootstrap.min.js"></script>\n
+  <script type="text/javascript" src="https://product.nadi3docms.com/nadidemo4/assets/js/jquery.marquee.min.js"></script>\n
+  <script type="text/javascript" src="https://product.nadi3docms.com/nadidemo4/assets/js/owl.carousel.min.js"></script>\n
+  <script type="text/javascript" src="https://product.nadi3docms.com/nadidemo4/assets/js/main.js"></script>\n
+  ${result.staticMarkup}`);
 });
 
 export const routes = router;

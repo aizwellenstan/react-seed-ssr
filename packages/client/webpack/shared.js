@@ -113,7 +113,7 @@ function shared(command, argv) {
         title: 'Refined itsukara.link',
         alwaysNotify: true,
         contentImage: path.resolve(
-          require.resolve('@ril/arts'),
+          require.resolve('../../arts'),
           '../static/logo-small.png',
         ),
       }),

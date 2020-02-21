@@ -15,9 +15,9 @@
     "test:stylelint": "stylelint 'packages/**/*.{tsx,tsx}'",
     "test:tsc": "tsc -p packages/client && tsc -p packages/server",
     "build:client": "cd packages/client && npm run build",
-    "build:gateway": "cd packages/gateway && npm install && npm run build",
-    "watch": "cd packages/client && npm install && npm run watch",
-    "start:server": "cd packages/server && npm install && npm run start",
+    "build:gateway": "cd packages/gateway && npm run build",
+    "watch": "cd packages/client && npm run watch",
+    "start:server": "cd packages/server && npm run start",
     "start": "npm run start:server& npm run watch",
     "manage:translations": "i18next-scanner 'packages/**/*.{ts,tsx}'"
   },
