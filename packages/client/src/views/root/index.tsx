@@ -1,18 +1,20 @@
 import React, { useContext } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+// import { Route, Switch, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
-import NoSSR from 'react-no-ssr';
+// import NoSSR from 'react-no-ssr';
 import { styled, ThemeContext } from 'src/styles';
-import { Activities } from 'src/views/activities';
-import { renderNotFound } from 'src/views/not-found';
-import { Performers } from 'src/views/performers';
-import { Teams } from 'src/views/teams';
-import { Search } from 'src/views/search';
+// import { Activities } from 'src/views/activities';
+// import { renderNotFound } from 'src/views/not-found';
+// import { Performers } from 'src/views/performers';
+// import { Teams } from 'src/views/teams';
+// import { Search } from 'src/views/search';
 import { Banner } from 'src/components/banner';
 import { GlobalStyle } from 'src/styles/global-style';
 import { Seo } from 'src/components/seo';
-import { GettingStarted } from 'src/components/getting-started';
+// import { GettingStarted } from 'src/components/getting-started';
+
+import { Home } from 'src/views/home';
 
 const Wrapper = styled.main`
   display: flex;
@@ -27,6 +29,95 @@ const Content = styled.div`
   flex-direction: column;
   width: 100%;
 `;
+
+let Main = Home;
+if (typeof window !== 'undefined') {
+  if (localStorage.getItem('pageNow')) {
+    pageNow = localStorage.getItem('pageNow').toString();
+    switch (pageNow) {
+      case 'Home':
+        Main = Home;
+        break;
+      // case 'Login':
+      //   Main = Login;
+      //   break;
+      // case 'AlarmList':
+      //   Main = AlarmList;
+      //   break;
+      // case 'AlarmHistory':
+      //   Main = AlarmHistory;
+      //   break;
+      // case 'AlarmSetting':
+      //   Main = AlarmSetting;
+      //   break;
+      // case 'Assets':
+      //   Main = Assets;
+      //   break;
+      // case 'CreateCold':
+      //   Main = CreateCold;
+      //   break;
+      // case 'UpdateCold':
+      //   Main = UpdateCold;
+      //   break;
+      // case 'EditCold':
+      //   Main = EditCold;
+      //   break;
+      // case 'QueryCold':
+      //   Main = QueryCold;
+      //   break;
+      // case 'DeleteCold':
+      //   Main = DeleteCold;
+      //   break;
+      // case 'Schedule':
+      //   Main = Schedule;
+      //   break;
+      // case 'NewAssets':
+      //   Main = NewAssets;
+      //   break;
+      // case 'EquipList':
+      //   Main = EquipList;
+      //   break;
+      // case 'ViewEquipList':
+      //   Main = ViewEquipList;
+      //   break;
+      // case 'EditEquipList':
+      //   Main = EditEquipList;
+      //   break;
+      // case 'Maintance':
+      //   Main = Maintance;
+      //   break;
+      // case 'ViewMaintance':
+      //   Main = ViewMaintance;
+      //   break;
+      // case 'Notification':
+      //   Main = Notification;
+      //   break;
+      // case 'Report':
+      //   Main = Report;
+      //   break;
+      // case 'CreateAccount':
+      //   Main = CreateAccount;
+      //   break;
+      // case 'UpdateAccount':
+      //   Main = UpdateAccount;
+      //   break;
+      // case 'EditAccount':
+      //   Main = EditAccount;
+      //   break;
+      // case 'QueryAccount':
+      //   Main = QueryAccount;
+      //   break;
+      // case 'DeleteAccount':
+      //   Main = DeleteAccount;
+      //   break;
+      // case 'Settings':
+      //   Main = Settings;
+      //   break;
+      default:
+        Main = Home;
+    }
+  }
+}
 
 export const Root = () => {
   const { t } = useTranslation();
@@ -73,22 +164,23 @@ export const Root = () => {
       <Wrapper>
         <Content>
           <Banner />
-          <Switch>
+          {/* <Switch>
             <Redirect exact from="/" to="/activities" />
             <Route exact path="/activities" component={Activities} />
             <Route exact path="/performers" component={Performers} />
             <Route exact path="/teams" component={Teams} />
             <Route path="/search" component={Search} />
             <Route render={renderNotFound} />
-          </Switch>
+          </Switch> */}
+          <Main />
         </Content>
       </Wrapper>
 
       <GlobalStyle />
 
-      <NoSSR>
+      {/* <NoSSR>
         <GettingStarted />
-      </NoSSR>
+      </NoSSR> */}
     </>
   );
 };

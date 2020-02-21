@@ -54,6 +54,15 @@ function shared(command, argv) {
             },
           ],
         },
+        {
+          test: /\.(html)$/,
+          use: {
+            loader: 'html-loader',
+            options: {
+              attrs: [':data-src']
+            }
+          }
+        }
       ],
     },
 
